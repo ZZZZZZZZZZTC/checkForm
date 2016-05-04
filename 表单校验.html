@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
+input{ border:#999 solid 1px;}
+.error{ border:#F00 solid 1px;}
+.ok{ border:green solid 1px;}
+</style>
+<script src="checkForm2.js"></script>
+<script>
+window.onload=function(){
+	checkForm('fm1',function(obj){
+		//obj	==	第2个输入框
+		
+		var oPass1=document.getElementsByName('pass')[0];	
+		if(oPass1.value!=obj.valzue){
+			//alert('.');
+			return false;	
+		}
+	});
+	//checkForm('fm1');
+};
+</script>
+</head>
+
+<body>
+
+<form action="http://www.zhinengshe.com" id="fm1">
+	邮箱:<input type="text" id="mail" name="mail" value="alex@qq.com.cn"><br>
+    电话:<input type="text" id="tel" name="tel" value="027-87654321"><br>
+    年龄:<input type="text" id="age" name="age" value="18"><br>
+    用户名:<input type="text" id="user" name="user" value="大帅哥"><br>
+    qq:<input type="text" id="qq" name="qq" value="3503716"><br>
+    密码:<input type="text" id="pw" name="pass"><br>
+    确认密码:<input type="text" id="pw2" name="pass2"><br>
+    <input type="submit" value="注册" id="btn1">
+</form>
+
+</body>
+</html>
